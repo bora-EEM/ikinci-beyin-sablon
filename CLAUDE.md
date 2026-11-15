@@ -25,6 +25,12 @@ tutulmaz; o süreçtir ve git geçmişinde durur. Kalan sonuçtur: çalışan ö
 dosyasında, geçerli kararlar ve elenen yollar `.beyin/Temeller.md` dosyasında, şimdiki durum ve sıradaki iş
 `DURUM.md` dosyasında.
 
+## Düzeltme gelince, hemen
+
+Kullanıcı seni düzelttiğinde ("bunu böyle yapma") ya da kalıcı bir tercih söylediğinde oturumun sonunu bekleme:
+o an `🔮 850-Companion/Kurallar.md` dosyasına kural olarak yaz ve kullanıcıya tek cümleyle söyle. Orası yalnız her
+projede geçerli kuralları tutar; tek bir projeye ait kural o projenin `CLAUDE.md` dosyasına iner.
+
 ## Oturum sonunda
 
 Her anlamlı oturum iz bırakır: bir not, bir karar ya da güncellenmiş bir dosya.
@@ -37,9 +43,6 @@ girer. Projenin temel bir kararı değiştiyse `.beyin/Temeller.md` dosyasına k
 Companion'a: `Last-Session.md` dosyasına 3 ile 5 cümle (kullanıcı ne istedi, ne karar verdi, onun hakkında ne
 öğrendim), `Threads.md` dosyasına proje başına tek satır, kullanıcının ölçüsüne dair yeni bir şey öğrendiysen
 `Olcu.md`, önemli bir olay olduysa `Journal.md`.
-
-Kullanıcı seni düzelttiğinde ("bunu böyle yapma") bunu `Kurallar.md` dosyasına kural olarak ekle. Orası yalnız
-her projede geçerli kuralları tutar; tek bir projeye ait kural o projenin `CLAUDE.md` dosyasına iner.
 
 Günlük ve raf: `daily/` altında o günün dosyasına (`YYYY-AA-GG.md`) oturumun birkaç cümlelik özetini ekle.
 Oturumda projeden bağımsız, yeniden işe yarayacak bir konu ikinci kez karşına çıktıysa `knowledge/concepts/`

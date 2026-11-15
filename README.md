@@ -42,16 +42,26 @@ kendiliğinden okur; bu yüzden ek bir program kurmak gerekmez.
 
 | Ne | Neden | Nereden |
 | --- | --- | --- |
-| Claude Code | Klasörü okuyup yazan asistan | [claude.com/claude-code](https://claude.com/claude-code) (uçbirim, masaüstü uygulaması ya da VS Code eklentisi) |
+| Claude Code | Klasörü okuyup yazan asistan; ücretli bir Claude aboneliği ve ilk açılışta giriş ister | [claude.com/claude-code](https://claude.com/claude-code) (uçbirim, masaüstü uygulaması ya da VS Code eklentisi) |
 | Git | Geçmişi tutar, bilgisayarlar arasında taşır | [git-scm.com](https://git-scm.com/downloads) |
 | GitHub hesabı | Yedek ve ikinci bilgisayar için; zorunlu değil | [github.com](https://github.com) |
 | Obsidian | Notları görsel olarak gezmek için; zorunlu değil | [obsidian.md](https://obsidian.md) |
 
-Kurulu olduklarını uçbirimde şöyle denetleyebilirsin; ikisi de bir sürüm numarası yazmalı:
+Kurulu olduklarını uçbirimde şöyle denetleyebilirsin; ikisi de bir sürüm numarası yazmalı. Claude Code'u yalnız
+masaüstü uygulaması olarak kullanıyorsan ikinci satırı atla.
 
 ```bash
 git --version
 claude --version
+```
+
+Git'i yeni kurduysan bir kez adını ve e-postanı tanıt; yoksa ilk kayıtta hata alırsın. Üçüncü satır, klasör
+adlarındaki simgelerin git çıktısında okunur görünmesini sağlar:
+
+```bash
+git config --global user.name "Adın Soyadın"
+git config --global user.email "e-posta@adresin.com"
+git config --global core.quotepath false
 ```
 
 ### 1. Kendi kopyanı oluştur
@@ -64,8 +74,8 @@ git clone https://github.com/KULLANICI-ADIN/DEPO-ADIN.git ikinci-beyin
 cd ikinci-beyin
 ```
 
-**GitHub'sız.** Sayfanın üstündeki **Code** düğmesinden **Download ZIP** ile indir, istediğin yere aç ve klasörün
-içinde git'i başlat:
+**GitHub'sız.** Sayfanın üstündeki **Code** düğmesinden **Download ZIP** ile indir ve istediğin yere aç. Açılan
+klasörün adı depo adının sonuna `-main` eklenmiş halidir; adını `ikinci-beyin` yap ve içinde git'i başlat:
 
 ```bash
 cd ikinci-beyin
@@ -93,18 +103,18 @@ Asistan sana kim olduğunu, ne üzerinde çalıştığını ve nasıl bir dil is
 
 Bu adım, kurulumun gerçekten işlediğini görmenin tek yolu:
 
-1. Aynı oturumda asistana kalıcı bir şey söyle: *"Bundan sonra cevaplarında madde listesi kullanma."*
-2. Oturumu kapat, **yeni bir oturum** aç.
+1. Asistanı bir konuda düzelt: *"Bundan sonra cevaplarında madde listesi kullanma, düz paragraf yaz."* Asistan
+   bunu beklemeden `🔮 850-Companion/Kurallar.md` dosyasına yazar ve sana söyler.
+2. *"Oturumu kaydet"* de, sonra oturumu kapat ve **yeni bir oturum** aç.
 3. Sor: *"Benimle ilgili hangi kuralları biliyorsun?"*
 
-Asistan söylediğin kuralı geri okuyorsa beyin çalışıyor. Ne değiştiğini dosyada da görebilirsin:
+Asistan söylediğin kuralı geri okuyorsa beyin çalışıyor. Kuralın dosyaya girdiğini kendi gözünle de görebilirsin:
 
 ```bash
-git log --oneline -3
-git show --stat HEAD
+git log --oneline -3 -- "🔮 850-Companion/Kurallar.md"
 ```
 
-`🔮 850-Companion/Kurallar.md` değişmiş görünmeli.
+Listede en az bir kayıt görünmeli; dosyayı açınca kural en altta durur.
 
 ### 5. İlk projeni aç
 
@@ -126,8 +136,8 @@ git push
 ### İsteğe bağlı: ikinci bilgisayar ve Obsidian
 
 **İkinci bilgisayar.** Aynı depoyu orada da `git clone` ile indir. Asistan her oturumun başında son hali çeker,
-sonunda gönderir; iki bilgisayar aynı beyni paylaşır. Yalnız o bilgisayara ait işleri `yerel/` klasörüne koy;
-o klasör git'e hiç girmez.
+sonunda gönderir; iki bilgisayar aynı beyni paylaşır. Yalnız o bilgisayara ait işler için kökte `yerel/` adında
+bir klasör aç; o klasör git'e hiç girmez, bu yüzden kopyada hazır gelmez.
 
 **Obsidian.** Obsidian'da **Open folder as vault** ile `ikinci-beyin` klasörünü seç. Notlar arasındaki
 bağlantıları harita olarak görürsün. Obsidian nokta ile başlayan klasörleri (`.beyin/`) göstermez; proje hafızasına
@@ -156,7 +166,7 @@ projeler/               Projelerin; her biri hafızasını kendi .beyin/ klasör
 📋 Templates/           Not ve proje şablonları
 📥 000-Inbox/           Hızlı yakalama
 📦 900-Archive/         Güncelliğini yitirmiş ama atılmayan notlar
-yerel/                  Yalnız bu bilgisayara ait işler (git dışı)
+yerel/                  Yalnız bu bilgisayara ait işler (git dışı; gerekince sen açarsın)
 ```
 
 Dosya dosya ayrıntı: [beyin-haritasi.md](🧠%20500-Knowledge/beyin-haritasi.md).
@@ -165,7 +175,7 @@ Dosya dosya ayrıntı: [beyin-haritasi.md](🧠%20500-Knowledge/beyin-haritasi.m
 
 ![Bir projenin içi ve dolu bir proje kartı örneği](gorseller/proje-karti.svg)
 
-Asistan açılışta projenin yalnız kartını okur; beş satırlık bir dosya, bağlamı küçük tutar. Çalışan özellikler
+Asistan açılışta projenin yalnız kartını ve kısa durum dosyasını okur; kart beş satırdır, bağlamı küçük tutar. Çalışan özellikler
 `Ozellikler.md` içinde her biri kendi başlığında durur ve adıyla aranır, baştan sona okunmaz. Geçerli kararlar ve
 **elenen yollar** `Temeller.md` içindedir: denenip bırakılan fikir yazılı olduğu için aylar sonra yeniden
 denenmez.
@@ -175,7 +185,7 @@ denenmez.
 ## Tasarım kararları
 
 Bu düzen [AvenoxBeyin](https://github.com/avenoxai/avenoxbeyin) projesinin ikinci sürümünden yola çıktı ve
-aylarca her gün kullanılarak değişti. Değişenlerin her biri yaşanmış bir sorundan geldi:
+yaklaşık üç ay boyunca, neredeyse her gün kullanılarak değişti. Değişenlerin her biri yaşanmış bir sorundan geldi:
 
 | Karar | Neden |
 | --- | --- |
@@ -193,12 +203,12 @@ işleten betikler de var; burada yer almıyorlar, ama düzenin ne kadar taşıd�
 
 | Ölçü | Değer |
 | --- | --- |
-| Kullanım süresi | Ağustos 2026'dan bu yana, 64 farklı günde |
+| Kullanım süresi | Ağustos 2026'dan bu yana, 83 günün 64'ünde |
 | Git'e kaydedilen oturum ve değişiklik | 1.270'in üzerinde |
 | Aynı anda yürüyen proje | 17 |
 | Düzeltmelerden çıkan genel kural | 56 |
-| Raftaki konu sayfası | 209 |
-| Toplam hafıza / açılışta okunan | 407 KB / 15,5 KB |
+| Raftaki konu sayfası | 200'ün üzerinde |
+| Toplam hafıza / açılışta okunan | 407 KB / 15,5 KB (beynin günlük karnesinden) |
 
 Son satır düzenin asıl getirisi: hafıza büyüdükçe asistanın her açılışta okuduğu kısım küçük kalıyor, çünkü her şey
 tek yerde ve gerekince okunuyor. Benim kopyamdaki ek parçalar şunlar: geceleri günlükleri konu sayfalarına işleyen
