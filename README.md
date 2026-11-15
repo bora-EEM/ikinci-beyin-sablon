@@ -67,7 +67,9 @@ git config --global core.quotepath false
 ### 1. Kendi kopyanı oluştur
 
 **GitHub ile (önerilen).** Bu sayfanın üstündeki **Use this template** düğmesine bas, **Create a new repository**
-seç. Depoya bir ad ver ve **Private** işaretle: beynin zamanla kişisel bilgi taşıyacak. Sonra bilgisayarına indir:
+seç. Depoya bir ad ver ve **Private** işaretle: beynin zamanla kişisel bilgi taşıyacak ve asistan her oturum
+sonunda onu gönderecek. **Fork düğmesini kullanma:** herkese açık bir deponun çatalı (fork) özel yapılamaz, içine
+yazdığın her şey herkese açılır. Sonra bilgisayarına indir:
 
 ```bash
 git clone https://github.com/KULLANICI-ADIN/DEPO-ADIN.git ikinci-beyin
@@ -230,6 +232,13 @@ kullanılabilir; ben yalnız Claude Code ile kullanıyorum.
 
 **Her şeyi kendiliğinden hatırlar mı?** Hayır. Asistan yalnız dosyalara yazılanı hatırlar. Kapanış adımı bu yüzden
 önemli: kaydedilmemiş bir oturum hiç yaşanmamış sayılır.
+
+## Güvenlik
+
+Beyne parola, erişim anahtarı, kimlik ya da kart numarası yazma: asistan her oturum sonunda dosyaları git'e
+kaydeder ve uzak depoya gönderir. Böyle bir bilgiyi tutman gerekiyorsa git dışında kalan `yerel/` klasörüne koy.
+Şablondan açtığın depo bu depoya bağlı kalmaz; buradaki sonraki değişiklikler sana kendiliğinden gelmez. `CLAUDE.md`
+asistana verilen talimattır: dışarıdan aldığın bir değişikliği ya da katkıyı eklemeden önce oku.
 
 ## Lisans ve teşekkür
 
