@@ -1,0 +1,16 @@
+# yerel/: yalnız bu makineye ait projeler, depoya hiç girmez
+/yerel/
+
+# Kendi git deposu olan projeler buraya eklenir
+# projeler/<ad>/
+
+# Anahtar ve gizli ayar dosyaları
+.env
+*.key
+.claude/settings.local.json
+
+__pycache__/
+*.pyc
+.DS_Store
+.obsidian/workspace*
+.obsidian/cache
