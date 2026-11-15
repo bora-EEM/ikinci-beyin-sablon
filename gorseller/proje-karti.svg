@@ -7,7 +7,7 @@
   <rect x="40" y="116" width="330" height="290" rx="14" fill="#1e293b" stroke="#334155"/>
   <text fill="#cbd5e1" font-size="15" font-family="Consolas, Menlo, monospace">
     <tspan x="62" y="152" fill="#f1f5f9">projeler/hava-uygulamasi/</tspan>
-    <tspan x="80" y="184">CLAUDE.md</tspan>
+    <tspan x="80" y="184">AGENTS.md</tspan>
     <tspan x="80" y="212">DURUM.md</tspan>
     <tspan x="80" y="240">.beyin/</tspan>
     <tspan x="104" y="268" fill="#34d399" font-weight="700">Kart.md</tspan>

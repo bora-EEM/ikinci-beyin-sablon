@@ -1,7 +1,7 @@
 # Kurallar
 
 Kullanıcı asistanı düzelttiğinde düzeltme buraya kural olarak yazılır. Yalnız her projede geçerli kurallar
-burada durur; tek bir projeye ait kural o projenin `CLAUDE.md` dosyasına iner.
+burada durur; tek bir projeye ait kural o projenin `AGENTS.md` dosyasına iner.
 
 Biçim: her kural tek madde, tek ya da iki cümle, sonunda tarih. Hiç esnemeyecek kuralın başına 📌 konur.
 Aynı anlama gelen iki kural birleştirilir; kural listesi uzadıkça değil sadeleştikçe iyidir.

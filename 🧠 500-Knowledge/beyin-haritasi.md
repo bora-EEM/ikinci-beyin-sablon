@@ -1,7 +1,7 @@
 # Beyin haritası
 
 Beynin genel şeması: hangi klasör ne tutar, hangi dosyayı kim yazar, bir oturum nasıl başlar ve biter. Kök
-`CLAUDE.md` kısa yönlendiricidir; ayrıntı buradadır ve gerekince okunur.
+`AGENTS.md` kısa yönlendiricidir; ayrıntı buradadır ve gerekince okunur.
 
 ## Klasörler
 
@@ -33,7 +33,7 @@ Beynin genel şeması: hangi klasör ne tutar, hangi dosyayı kim yazar, bir otu
 
 | Dosya | Ne tutar |
 | --- | --- |
-| `CLAUDE.md` | Projenin amacı, bittiğinin ölçüsü, değişmez sınırları, komutları |
+| `AGENTS.md` | Projenin amacı, bittiğinin ölçüsü, değişmez sınırları, komutları |
 | `DURUM.md` | Yalnız şimdi: durum, açık kararlar, sıradaki işler. Kısa kalır |
 | `.beyin/Kart.md` | Tek bakışta proje: amaç, nerede, sırada. Açılışta okunan dosya |
 | `.beyin/Ozellikler.md` | Çalışan özellikler, her biri kendi başlığında; adıyla aranır |
@@ -53,7 +53,7 @@ bir oturum hiç yaşanmamış sayılır.
 ## Kural nereye yazılır
 
 Her projede geçerli olan kural `🔮 850-Companion/Kurallar.md` dosyasına, tek bir projeye ait olan o projenin
-`CLAUDE.md` dosyasına yazılır. Genel defter büyüdükçe aynı anlama gelen kurallar birleştirilir, proje kuralına
+`AGENTS.md` dosyasına yazılır. Genel defter büyüdükçe aynı anlama gelen kurallar birleştirilir, proje kuralına
 dönüşenler projesine indirilir.
 
 ## Birden fazla makine
@@ -66,4 +66,4 @@ kaydedilir.
 
 Bu depo yalnız düzeni ve kuralları taşır; hiçbir betik içermez. Açılışta dosyaları kendiliğinden yükleyen,
 oturumu özetleyen ya da eski notu arşive indiren otomasyon isteyen bunu kendi ihtiyacına göre ekler. Düzen
-betiksiz de çalışır: asistan kök `CLAUDE.md` dosyasını okur ve adımları elle yapar.
+betiksiz de çalışır: asistan kök `AGENTS.md` dosyasını okur ve adımları elle yapar.

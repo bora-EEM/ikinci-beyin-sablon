@@ -5,4 +5,4 @@ Kullanıcıya dair olan buraya değil `🔮 850-Companion/Last-Session.md` dosya
 
 ## {{TARIH}}: proje açıldı
 
-İskelet şablondan kuruldu; `CLAUDE.md` dosyasında amaç ve ölçü, `DURUM.md` dosyasında ilk kararlar.
+İskelet şablondan kuruldu; `AGENTS.md` dosyasında amaç ve ölçü, `DURUM.md` dosyasında ilk kararlar.

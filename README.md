@@ -1,12 +1,13 @@
 # İkinci Beyin
 
-**Yapay zeka asistanın her yeni sohbette seni sıfırdan tanımasın.** İkinci Beyin, Claude Code ile kullanılan bir
-hafıza klasörüdür: kim olduğunu, seni nasıl düzelttiğini, projelerinin nerede kaldığını düz Markdown dosyalarında
-tutar. Asistan her oturuma bu dosyaları okuyarak başlar, öğrendiğini yerine yazarak bitirir.
+**Yapay zeka asistanın her yeni sohbette seni sıfırdan tanımasın.** İkinci Beyin, terminalde çalışan bir
+yapay zeka asistanıyla (Claude Code, Codex CLI, Gemini CLI, OpenCode) kullanılan bir hafıza klasörüdür: kim
+olduğunu, seni nasıl düzelttiğini, projelerinin nerede kaldığını düz Markdown dosyalarında tutar. Asistan her
+oturuma bu dosyaları okuyarak başlar, öğrendiğini yerine yazarak bitirir.
 
 Bu depo o klasörün düzenini, kurallarını ve şablonlarını taşır. İçi boş gelir; sen kullandıkça dolar.
 
-Claude Code · Markdown · Git · isteğe bağlı Obsidian · MIT lisansı
+Terminal asistanı · Markdown · Git · isteğe bağlı Obsidian · MIT lisansı
 
 ---
 
@@ -31,8 +32,8 @@ iki yerde çelişmez.
 
 ![Bir oturumun döngüsü: açılış, çalışma, kapanış](gorseller/oturum-dongusu.svg)
 
-Döngünün kuralları kökteki [`CLAUDE.md`](CLAUDE.md) dosyasında yazar. Claude Code bu dosyayı her oturumun başında
-kendiliğinden okur; bu yüzden ek bir program kurmak gerekmez.
+Döngünün kuralları kökteki [`AGENTS.md`](AGENTS.md) dosyasında yazar. Bu, terminal asistanlarının ortak kural
+dosyası adıdır: asistan onu her oturumun başında kendiliğinden okur, bu yüzden ek bir program kurmak gerekmez.
 
 ---
 
@@ -42,17 +43,27 @@ kendiliğinden okur; bu yüzden ek bir program kurmak gerekmez.
 
 | Ne | Neden | Nereden |
 | --- | --- | --- |
-| Claude Code | Klasörü okuyup yazan asistan; ücretli bir Claude aboneliği ve ilk açılışta giriş ister | [claude.com/claude-code](https://claude.com/claude-code) (uçbirim, masaüstü uygulaması ya da VS Code eklentisi) |
+| Terminal asistanı | Klasörü okuyup yazan yapay zeka; çoğu bir abonelik ya da API anahtarı ve ilk açılışta giriş ister | Aşağıdaki tablodan birini seç |
 | Git | Geçmişi tutar, bilgisayarlar arasında taşır | [git-scm.com](https://git-scm.com/downloads) |
 | GitHub hesabı | Yedek ve ikinci bilgisayar için; zorunlu değil | [github.com](https://github.com) |
 | Obsidian | Notları görsel olarak gezmek için; zorunlu değil | [obsidian.md](https://obsidian.md) |
 
-Kurulu olduklarını uçbirimde şöyle denetleyebilirsin; ikisi de bir sürüm numarası yazmalı. Claude Code'u yalnız
-masaüstü uygulaması olarak kullanıyorsan ikinci satırı atla.
+Asistan olarak şunlardan birini kullanabilirsin. Hepsi aynı `AGENTS.md` dosyasını okur; okuma yolu farklı olanlar
+için gereken küçük ayar dosyası depoyla hazır gelir, senin bir şey yapman gerekmez.
+
+| Asistan | Kural dosyasını nasıl okur | Komut | Nereden |
+| --- | --- | --- | --- |
+| Claude Code | Kökteki `CLAUDE.md` onu `AGENTS.md` dosyasına yönlendirir | `claude` | [claude.com/claude-code](https://claude.com/claude-code) |
+| Codex CLI | `AGENTS.md` dosyasını doğrudan okur | `codex` | [github.com/openai/codex](https://github.com/openai/codex) |
+| Gemini CLI | Hazır gelen `.gemini/settings.json` ile `AGENTS.md` dosyasını okur | `gemini` | [github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) |
+| OpenCode | `AGENTS.md` dosyasını doğrudan okur | `opencode` | [opencode.ai](https://opencode.ai) |
+
+Kurulu olduklarını uçbirimde şöyle denetleyebilirsin; ikisi de bir sürüm numarası yazmalı. İkinci satırdaki
+`codex` yerine kendi asistanının komutunu yaz.
 
 ```bash
 git --version
-claude --version
+codex --version
 ```
 
 Git'i yeni kurduysan bir kez adını ve e-postanı tanıt; yoksa ilk kayıtta hata alırsın. Üçüncü satır, klasör
@@ -86,16 +97,16 @@ git add -A
 git commit -m "ikinci beyin kuruldu"
 ```
 
-### 2. Klasörü Claude Code ile aç
+### 2. Klasörü asistanınla aç
 
-Uçbirimde klasörün içindeyken `claude` yaz. Masaüstü uygulamasında yeni oturum açarken klasör olarak
-`ikinci-beyin`'i seç. Önemli olan, oturumun bu klasörün **kökünden** açılması: `CLAUDE.md` orada durur.
+Uçbirimde klasörün içindeyken asistanının komutunu yaz (`claude`, `codex`, `gemini` ya da `opencode`). Önemli
+olan, oturumun bu klasörün **kökünden** açılması: `AGENTS.md` orada durur.
 
 ### 3. Asistanla tanış
 
 İlk oturumda şunu yaz:
 
-> CLAUDE.md dosyasını oku. Beni tanımak için birkaç kısa soru sor ve cevaplarımla Core.md ile Olcu.md
+> AGENTS.md dosyasını oku. Beni tanımak için birkaç kısa soru sor ve cevaplarımla Core.md ile Olcu.md
 > dosyalarını doldur. Bitince oturumu kapanış kurallarına göre kaydet.
 
 Asistan sana kim olduğunu, ne üzerinde çalıştığını ve nasıl bir dil istediğini sorar, cevaplarını
@@ -149,7 +160,7 @@ dosya gezgininden ya da asistandan bakılır.
 
 | Belirti | Neden ve çözüm |
 | --- | --- |
-| Asistan seni tanımıyor gibi davranıyor | Oturum kökten açılmamıştır. Klasörün kökünden yeniden aç ya da *"CLAUDE.md dosyasını oku"* de |
+| Asistan seni tanımıyor gibi davranıyor | Oturum kökten açılmamıştır. Klasörün kökünden yeniden aç ya da *"AGENTS.md dosyasını oku"* de |
 | Kurallar dosyası hiç değişmiyor | Kapanış adımı atlanmıştır. Oturum sonunda *"oturumu kapanış kurallarına göre kaydet"* de |
 | İki bilgisayarda farklı notlar var | Bir taraf göndermeden kapanmıştır. Önce `git pull`, sonra çalışmaya başla |
 | Emoji içeren klasör adları uçbirimde garip görünüyor | Yalnız görünüştür; dosyalar doğru çalışır. Tırnak içinde yaz: `cd "🔮 850-Companion"` |
@@ -159,7 +170,8 @@ dosya gezgininden ya da asistandan bakılır.
 ## Klasörler
 
 ```
-CLAUDE.md               Asistanın her oturumda okuduğu ana kurallar
+AGENTS.md               Asistanın her oturumda okuduğu ana kurallar
+CLAUDE.md, .gemini/     Claude Code ile Gemini CLI'ı AGENTS.md dosyasına yönlendiren küçük dosyalar
 🔮 850-Companion/       Kim: kimlik, kurallar, ölçü, sözlük, açık konular, son oturum
 🧠 500-Knowledge/       Nasıl: kalıcı yöntem; genel şema beyin-haritasi.md
 knowledge/              Raf: tekrar eden konuların sayfaları ve fihristi
@@ -222,13 +234,14 @@ geçmiş düzeltmelerden oluşan bir sınavla denetleyen bir kontrol.
 ## Sık sorulanlar
 
 **Notlarım nerede duruyor?** Yalnız senin bilgisayarında ve kendi git deponda, düz Markdown dosyaları olarak.
-Asistan çalışırken okuduğu dosyalar kullandığın yapay zeka hizmetine gönderilir; bu, Claude Code'u kullanmanın
-olağan hali.
+Asistan çalışırken okuduğu dosyalar kullandığın yapay zeka hizmetine gönderilir; bu, bulutta çalışan her asistanın
+olağan hali. Yerel bir modelle çalışan bir asistan seçersen dosyalar bilgisayarından çıkmaz.
 
-**Claude Code dışında çalışır mı?** Düzen düz dosyalardan oluştuğu için ana kural dosyasını okuyabilen her asistanla
-kullanılabilir; ben yalnız Claude Code ile kullanıyorum.
+**Hangi asistanla çalışır?** Düzen düz dosyalardan oluştuğu için `AGENTS.md` dosyasını okuyan ve dosya yazıp git
+komutu çalıştırabilen her terminal asistanıyla. Ben her gün Claude Code ile kullanıyorum; yukarıdaki tablodaki
+öbür asistanlar da aynı dosyayı okur.
 
-**Ek ücret ya da sürekli açık bir hizmet var mı?** Yok. Claude Code aboneliğin dışında hiçbir şey gerekmez.
+**Ek ücret ya da sürekli açık bir hizmet var mı?** Yok. Seçtiğin asistanın kendi ücreti dışında hiçbir şey gerekmez.
 
 **Her şeyi kendiliğinden hatırlar mı?** Hayır. Asistan yalnız dosyalara yazılanı hatırlar. Kapanış adımı bu yüzden
 önemli: kaydedilmemiş bir oturum hiç yaşanmamış sayılır.
@@ -237,7 +250,7 @@ kullanılabilir; ben yalnız Claude Code ile kullanıyorum.
 
 Beyne parola, erişim anahtarı, kimlik ya da kart numarası yazma: asistan her oturum sonunda dosyaları git'e
 kaydeder ve uzak depoya gönderir. Böyle bir bilgiyi tutman gerekiyorsa git dışında kalan `yerel/` klasörüne koy.
-Şablondan açtığın depo bu depoya bağlı kalmaz; buradaki sonraki değişiklikler sana kendiliğinden gelmez. `CLAUDE.md`
+Şablondan açtığın depo bu depoya bağlı kalmaz; buradaki sonraki değişiklikler sana kendiliğinden gelmez. `AGENTS.md`
 asistana verilen talimattır: dışarıdan aldığın bir değişikliği ya da katkıyı eklemeden önce oku.
 
 ## Lisans ve teşekkür
