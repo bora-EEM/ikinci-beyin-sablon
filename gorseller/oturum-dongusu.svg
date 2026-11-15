@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="400" rx="18" fill="#0f172a"/>
+  <text x="40" y="58" fill="#f1f5f9" font-size="26" font-weight="700">Bir oturumun döngüsü</text>
+  <text x="40" y="88" fill="#94a3b8" font-size="16">Asistan her oturuma kaldığı yerden başlar, öğrendiğini bırakarak çıkar.</text>
+
+  <!-- 1 Açılış -->
+  <rect x="40" y="116" width="260" height="200" rx="14" fill="#1e293b" stroke="#334155"/>
+  <circle cx="74" cy="152" r="18" fill="#c084fc"/>
+  <text x="74" y="158" fill="#0f172a" font-size="17" font-weight="700" text-anchor="middle">1</text>
+  <text x="102" y="159" fill="#f1f5f9" font-size="20" font-weight="700">Açılış</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="60" y="200">Kimliğini, kurallarını ve</tspan>
+    <tspan x="60" y="222">açık konuları okur.</tspan>
+    <tspan x="60" y="256">Projede çalışılacaksa</tspan>
+    <tspan x="60" y="278">projenin kartını da okur.</tspan>
+  </text>
+
+  <!-- 2 Çalışma -->
+  <rect x="350" y="116" width="260" height="200" rx="14" fill="#1e293b" stroke="#334155"/>
+  <circle cx="384" cy="152" r="18" fill="#60a5fa"/>
+  <text x="384" y="158" fill="#0f172a" font-size="17" font-weight="700" text-anchor="middle">2</text>
+  <text x="412" y="159" fill="#f1f5f9" font-size="20" font-weight="700">Çalışma</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="370" y="200">Birlikte iş yapılır.</tspan>
+    <tspan x="370" y="234">"Bunu böyle yapma" dersen</tspan>
+    <tspan x="370" y="256">o an kural olarak yazılır,</tspan>
+    <tspan x="370" y="278">bir daha söylemen gerekmez.</tspan>
+  </text>
+
+  <!-- 3 Kapanış -->
+  <rect x="660" y="116" width="260" height="200" rx="14" fill="#1e293b" stroke="#334155"/>
+  <circle cx="694" cy="152" r="18" fill="#34d399"/>
+  <text x="694" y="158" fill="#0f172a" font-size="17" font-weight="700" text-anchor="middle">3</text>
+  <text x="722" y="159" fill="#f1f5f9" font-size="20" font-weight="700">Kapanış</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="680" y="200">Kart, durum ve özellikler</tspan>
+    <tspan x="680" y="222">güncellenir; sana dair</tspan>
+    <tspan x="680" y="244">öğrendiği 3-5 cümle yazılır.</tspan>
+    <tspan x="680" y="278">Hepsi git'e kaydedilir.</tspan>
+  </text>
+
+  <line x1="302" y1="216" x2="346" y2="216" stroke="#64748b" stroke-width="2.5" marker-end="url(#ok)"/>
+  <line x1="612" y1="216" x2="656" y2="216" stroke="#64748b" stroke-width="2.5" marker-end="url(#ok)"/>
+  <path d="M790,318 L790,352 L170,352 L170,322" fill="none" stroke="#64748b" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#ok)"/>
+  <text x="480" y="378" fill="#94a3b8" font-size="15" text-anchor="middle">Sonraki oturum, bir önceki nerede bıraktıysa oradan başlar</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <rect width="960" height="440" rx="18" fill="#0f172a"/>
+  <text x="40" y="58" fill="#f1f5f9" font-size="26" font-weight="700">Bir projenin içi: dolu hali neye benzer</text>
+  <text x="40" y="88" fill="#94a3b8" font-size="16">Örnek, uydurma bir proje. Asistan açılışta yalnız kartı okur; gerisini gerekince açar.</text>
+
+  <!-- Klasör ağacı -->
+  <rect x="40" y="116" width="330" height="290" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text fill="#cbd5e1" font-size="15" font-family="Consolas, Menlo, monospace">
+    <tspan x="62" y="152" fill="#f1f5f9">projeler/hava-uygulamasi/</tspan>
+    <tspan x="80" y="184">CLAUDE.md</tspan>
+    <tspan x="80" y="212">DURUM.md</tspan>
+    <tspan x="80" y="240">.beyin/</tspan>
+    <tspan x="104" y="268" fill="#34d399" font-weight="700">Kart.md</tspan>
+    <tspan x="104" y="296">Ozellikler.md</tspan>
+    <tspan x="104" y="324">Temeller.md</tspan>
+    <tspan x="104" y="352">Threads.md</tspan>
+    <tspan x="104" y="380">Last-Session.md</tspan>
+  </text>
+  <text fill="#64748b" font-size="13">
+    <tspan x="200" y="184">amaç, sınırlar</tspan>
+    <tspan x="200" y="212">yalnız şimdi</tspan>
+    <tspan x="250" y="268" fill="#34d399">tek bakışta</tspan>
+    <tspan x="250" y="296">adıyla aranır</tspan>
+    <tspan x="250" y="324">kararlar</tspan>
+    <tspan x="250" y="352">açık konular</tspan>
+    <tspan x="250" y="380">son oturum</tspan>
+  </text>
+
+  <!-- Kart -->
+  <rect x="396" y="116" width="524" height="290" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="420" y="152" fill="#34d399" font-size="14" font-family="Consolas, Menlo, monospace">.beyin/Kart.md</text>
+  <text x="420" y="186" fill="#f1f5f9" font-size="20" font-weight="700">Hava uygulaması: kart</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="420" y="224"><tspan font-weight="700" fill="#f1f5f9">Amaç:</tspan> Sabah tek bakışta "şemsiye lazım mı" sorusunu</tspan>
+    <tspan x="420" y="246">cevaplayan telefon uygulaması. Ölçü: 3 saniyede cevap.</tspan>
+    <tspan x="420" y="282"><tspan font-weight="700" fill="#f1f5f9">Nerede:</tspan> 2026-01-12: ana ekran ve konum izni çalışıyor,</tspan>
+    <tspan x="420" y="304">bildirim henüz yok.</tspan>
+    <tspan x="420" y="340"><tspan font-weight="700" fill="#f1f5f9">Sırada:</tspan> sabah 07:30 bildirimi. Kullanıcının eli: gerçek</tspan>
+    <tspan x="420" y="362">telefonda konum iznini denemek.</tspan>
+  </text>
+  <text x="420" y="392" fill="#64748b" font-size="13">Her oturum sonunda Nerede ve Sırada satırlarının üzerine yazılır.</text>
+</svg>

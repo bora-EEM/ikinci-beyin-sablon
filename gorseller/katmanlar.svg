@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <rect width="960" height="430" rx="18" fill="#0f172a"/>
+  <text x="40" y="58" fill="#f1f5f9" font-size="26" font-weight="700">Hafıza üç katman, birbirine karışmaz</text>
+  <text x="40" y="88" fill="#94a3b8" font-size="16">Her bilgi tek bir yere yazılır; asistan neyi nerede arayacağını bilir.</text>
+
+  <!-- Kim -->
+  <rect x="40" y="116" width="276" height="276" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
+  <rect x="40" y="116" width="276" height="8" rx="4" fill="#c084fc"/>
+  <text x="62" y="162" fill="#c084fc" font-size="24" font-weight="700">KİM</text>
+  <text x="62" y="190" fill="#e2e8f0" font-size="16" font-weight="600">Sana dair olan</text>
+  <text x="62" y="214" fill="#94a3b8" font-size="14" font-family="Consolas, Menlo, monospace">🔮 850-Companion/</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="62" y="250">Kimliğin ve önceliğin</tspan>
+    <tspan x="62" y="274">Düzeltmelerinden çıkan kurallar</tspan>
+    <tspan x="62" y="298">Neyi iyi saydığın</tspan>
+    <tspan x="62" y="322">Açık konular, son oturum</tspan>
+  </text>
+  <text x="62" y="368" fill="#c084fc" font-size="14" font-weight="600">Projeler bitse de kalır</text>
+
+  <!-- Nasıl -->
+  <rect x="342" y="116" width="276" height="276" rx="14" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="342" y="116" width="276" height="8" rx="4" fill="#60a5fa"/>
+  <text x="364" y="162" fill="#60a5fa" font-size="24" font-weight="700">NASIL</text>
+  <text x="364" y="190" fill="#e2e8f0" font-size="16" font-weight="600">Projeden bağımsız yöntem</text>
+  <text x="364" y="214" fill="#94a3b8" font-size="14" font-family="Consolas, Menlo, monospace">🧠 500-Knowledge/  knowledge/</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="364" y="250">Bir kez öğrenilen kurulum</tspan>
+    <tspan x="364" y="274">Tasarım ilkeleri</tspan>
+    <tspan x="364" y="298">Tekrar eden konuların sayfaları</tspan>
+    <tspan x="364" y="322">Beynin kendi şeması</tspan>
+  </text>
+  <text x="364" y="368" fill="#60a5fa" font-size="14" font-weight="600">Projeden projeye taşınır</text>
+
+  <!-- Ne -->
+  <rect x="644" y="116" width="276" height="276" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <rect x="644" y="116" width="276" height="8" rx="4" fill="#34d399"/>
+  <text x="666" y="162" fill="#34d399" font-size="24" font-weight="700">NE</text>
+  <text x="666" y="190" fill="#e2e8f0" font-size="16" font-weight="600">Projenin kendisi</text>
+  <text x="666" y="214" fill="#94a3b8" font-size="14" font-family="Consolas, Menlo, monospace">projeler/&lt;ad&gt;/.beyin/</text>
+  <text fill="#cbd5e1" font-size="15">
+    <tspan x="666" y="250">Şimdiki durum ve sıradaki iş</tspan>
+    <tspan x="666" y="274">Çalışan özellikler</tspan>
+    <tspan x="666" y="298">Temel kararlar, elenen yollar</tspan>
+    <tspan x="666" y="322">Projenin açık konuları</tspan>
+  </text>
+  <text x="666" y="368" fill="#34d399" font-size="14" font-weight="600">Projeyle birlikte yaşar</text>
+</svg>
